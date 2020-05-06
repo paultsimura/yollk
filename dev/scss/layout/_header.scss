@@ -17,9 +17,13 @@
     }
   }
   &__menu {
-
   }
-  @include respond-to('small') {
+  &__menu-link {
+    &:hover {
+      color: $color-yellow;
+    }
+  }
+  @include respond-to('sm') {
     &__logo {
       display: none;
     }

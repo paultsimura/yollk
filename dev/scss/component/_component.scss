@@ -53,7 +53,7 @@
     line-height: 1.2;
   }
 
-  @include respond-to('small') {
+  @include respond-to('sm') {
     &__logo {
       display: block;
       position: fixed;
@@ -61,7 +61,7 @@
       width: 75px;
       right: 40%;
       z-index: 51;
-      @include translate(300%, 0px);
+      @include translate(500px, 0px);
       @include anim(.3s, 0s);
 
       &.active {
@@ -74,7 +74,7 @@
       height: 100%;
       right: 0;
       top: 0;
-      padding: 175px 0 0 0;
+      padding: 200px 0 0 0;
       background-color: #fff;
       @include translate(100%, 0px);
       @include anim(.3s, 0s);
@@ -103,13 +103,13 @@
 }
 
 .icon-menu {
-  @include respond-to('small') {
+  @include respond-to('sm') {
     color: #000;
     display: block;
     cursor: pointer;
     position: absolute;
-    top: 18px;
-    right: 10px;
+    top: 20px;
+    right: 15px;
     width: 30px;
     height: 18px;
     z-index: 5;
