@@ -1,0 +1,21 @@
+@import "reset";
+@import "mixins";
+
+/* base */
+
+$color-yellow: #ffc93c;
+$color-orange: #ff9a3c;
+$color-red: #ff6f3c;
+$color-navy: #155263;
+$color-dark: #262b2e;
+
+body {
+  font-family: "Montserrat", Helvetica, sans-serif;
+}
+
+a {
+  color: inherit;
+  &:hover {
+    cursor: pointer;
+  }
+}

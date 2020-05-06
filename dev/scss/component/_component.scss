@@ -1,0 +1,124 @@
+@import "burger";
+
+.btn {
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: .2em;
+
+  padding: 0 3em;
+  line-height: 3;
+  @include transition();
+
+  &_outline {
+    color: #ffffff;
+    border: 1px solid #fff;
+
+    &:hover {
+      background-color: #fff;
+      color: #000;
+    }
+  }
+}
+
+.menu {
+  &__icon {
+    display: none;
+  }
+  &__body {
+
+  }
+  &__logo {
+    display: none;
+  }
+  &__list {
+    @include flexbox();
+
+    li {
+      margin: 0 20px 0 0;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+
+  }
+  &__link {
+    @include transition();
+    color: #fff;
+    font-size: .9rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    line-height: 1.2;
+  }
+
+  @include respond-to('small') {
+    &__logo {
+      display: block;
+      position: fixed;
+      top: 50px;
+      width: 75px;
+      right: 40%;
+      z-index: 51;
+      @include translate(300%, 0px);
+      @include anim(.3s, 0s);
+
+      &.active {
+        @include translate(50%, 0px);
+      }
+    }
+    &__body {
+      position: fixed;
+      width: 80%;
+      height: 100%;
+      right: 0;
+      top: 0;
+      padding: 175px 0 0 0;
+      background-color: #fff;
+      @include translate(100%, 0px);
+      @include anim(.3s, 0s);
+
+      &.active {
+        @include translate(0px, 0px);
+      }
+    }
+    &__list {
+      flex-direction: column;
+      align-items: center;
+
+      li {
+        margin: 0;
+        padding: 0 0 25px;
+        &:last-child {
+          padding: 0;
+        }
+      }
+    }
+    &__link {
+      color: #000;
+      font-size: 1.3rem;
+    }
+  }
+}
+
+.icon-menu {
+  @include respond-to('small') {
+    color: #000;
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 18px;
+    right: 10px;
+    width: 30px;
+    height: 18px;
+    z-index: 5;
+    span {
+      @include burger(25px, 3px, 5px, #fff);
+    }
+    &.active span {
+      @include burger(25px, 3px, 5px, #444);
+      @include burger-to-cross;
+    }
+  }
+}
