@@ -238,6 +238,7 @@
     color: rgb(119, 119, 119);
     border: 1px solid rgb(178, 178, 178);
     border-radius: 4px;
+    box-shadow: none;
 
     &:focus {
       outline: none;
@@ -253,6 +254,14 @@
     &__button {
       width: 100%;
       display: block;
+    }
+  }
+
+  @include respond-to('sm') {
+    &__input,
+    &__textarea,
+    &__label {
+      font-size: 16px;
     }
   }
 }

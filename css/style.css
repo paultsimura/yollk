@@ -453,6 +453,7 @@ a:hover {
   color: #777777;
   border: 1px solid #b2b2b2;
   border-radius: 4px;
+  box-shadow: none;
 }
 .form__input:focus, .form__textarea:focus {
   outline: none;
@@ -466,6 +467,11 @@ a:hover {
   .form__button {
     width: 100%;
     display: block;
+  }
+}
+@media (max-width: 767px) {
+  .form__input, .form__textarea, .form__label {
+    font-size: 16px;
   }
 }
 
