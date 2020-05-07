@@ -2,6 +2,8 @@
   position: absolute;
   width: 100%;
   color: #fff;
+  top: 0;
+  left: 0;
   z-index: 50;
 
   &__row {
@@ -11,9 +13,14 @@
     padding: 20px 0;
   }
   &__logo {
-    width: 100px;
+    flex: 0 0 100px;
+
     img {
-      width: 100%;
+      max-width: 100%;
+      display: block;
+    }
+    &_sm {
+      display: none;
     }
   }
   &__menu {
@@ -23,9 +30,24 @@
       color: $color-yellow;
     }
   }
+
   @include respond-to('sm') {
+    position: fixed;
+    background-color: #fff;
+
+    &__row {
+      padding: 15px 0;
+      height: 60px;
+    }
     &__logo {
-      display: none;
+      flex: 0 0 75px;
+
+      &_lg {
+        display: none;
+      }
+      &_sm {
+        display: block;
+      }
     }
   }
 }

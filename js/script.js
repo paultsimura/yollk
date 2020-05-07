@@ -1,18 +1,15 @@
 $(function() {
   $('.wrapper').addClass('loaded');
 
-
-
   // Burger menu button handler
   $('.icon-menu').click(function() {
     $(this).toggleClass('active');
-    $('.menu__body').toggleClass('active');
-    $('.menu__logo').toggleClass('active');
+    $('.header__menu').toggleClass('active');
     $('body').toggleClass('lock');
   });
 
   // Scrolling offset
-  const OFFSET = 0;
+  const OFFSET = 60;
 
   // Smooth scrolling using jQuery easing
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
@@ -32,8 +29,7 @@ $(function() {
   // Closes responsive menu when a scroll trigger link is clicked
   $('.menu .js-scroll-trigger').click(function() {
     $('.icon-menu').toggleClass('active');
-    $('.menu__body').toggleClass('active');
-    $('.menu__logo').toggleClass('active');
+    $('.header__menu').toggleClass('active');
     $('body').toggleClass('lock');
   });
 
@@ -47,4 +43,15 @@ $(function() {
 
   ibg();
 
+  // Collapse Navbar
+  const activateNavbar = function() {
+    let $mainNavbar = $("#main-navbar");
+    if ($mainNavbar.offset().top > OFFSET) {
+      $mainNavbar.addClass('active');
+    } else {
+      $mainNavbar.removeClass('active');
+    }
+  };
+  // Collapse now if page is not at top
+  activateNavbar();
 });

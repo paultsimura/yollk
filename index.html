@@ -26,21 +26,23 @@
         <header class="header">
             <div class="container">
                 <div class="header__row">
-                    <div class="header__logo">
-                        <img src="img/logo/logo-text-white.svg">
-                        <!--<img src="./img/yollk-2.svg"/>-->
+                    <a href="#cover" class="header__logo header__logo_lg js-scroll-trigger">
+                        <img src="img/logo/logo-verbal-white.svg">
+                    </a>
+                    <a href="#cover" class="header__logo header__logo_sm js-scroll-trigger">
+                        <img src="img/logo/logo-verbal.svg">
+                    </a>
+                    <div class="header__burger icon-menu">
+                        <span class="burger-icon"></span>
                     </div>
                     <nav class="header__menu menu">
-                        <div class="menu__icon icon-menu">
-                            <span class="burger-icon"></span>
-                        </div>
-                        <div class="menu__logo">
+                        <a href="#cover" class="menu__logo js-scroll-trigger">
                             <img src="img/logo/logo.svg" alt="">
-                        </div>
+                        </a>
                         <div class="menu__body">
                             <ul class="menu__list">
-                                <li><a href="#contact" class="menu__link header__menu-link js-scroll-trigger">Contact</a></li>
                                 <li><a href="#about" class="menu__link header__menu-link js-scroll-trigger">About us</a></li>
+                                <li><a href="#contact" class="menu__link header__menu-link js-scroll-trigger">Contact</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -48,7 +50,7 @@
             </div>
         </header>
 
-        <div class="cover">
+        <div class="cover" id="cover">
             <div class="cover__bg ibg"></div>
             <div class="cover__logo">
                 <img src="img/logo/logo.svg">
