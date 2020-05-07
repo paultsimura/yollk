@@ -37,9 +37,6 @@ $breakpoints: (
         'lg': 2000px
 ) !default;
 
-/// Mixin to manage responsive breakpoints
-/// @param {String} $breakpoint - Breakpoint name
-/// @require $breakpoints
 @mixin respond-to($breakpoint) {
   // If the key exists in the map
   @if map-has-key($breakpoints, $breakpoint) {
@@ -53,5 +50,24 @@ $breakpoints: (
   @else {
     @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
         + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+@mixin placeholders($color) {
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    opacity: .75;
+    color: unquote($color);
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    opacity: .75;
+    color: unquote($color);
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    opacity: .75;
+    color: unquote($color);
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    opacity: .75;
+    color: unquote($color);
   }
 }

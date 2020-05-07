@@ -39,8 +39,8 @@
                         </div>
                         <div class="menu__body">
                             <ul class="menu__list">
-                                <li><a href="#" class="menu__link header__menu-link">Contact</a></li>
-                                <li><a href="#" class="menu__link header__menu-link">About us</a></li>
+                                <li><a href="#contact" class="menu__link header__menu-link js-scroll-trigger">Contact</a></li>
+                                <li><a href="#about" class="menu__link header__menu-link js-scroll-trigger">About us</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -49,6 +49,7 @@
         </header>
 
         <div class="cover">
+            <div class="cover__bg ibg"></div>
             <div class="cover__logo">
                 <img src="img/logo/logo.svg">
             </div>
@@ -57,7 +58,7 @@
                     Yollk – handy rent
                 </div>
                 <div class="cover__subtitle subtitle">
-                    the only real estate service you need
+                    the only real estate app you need
                 </div>
             </div>
             <div class="cover__buttons">
@@ -70,6 +71,65 @@
         </div>
 
         <div class="content" id="content">
+            <section id="about" class="section about">
+                <div class="container">
+                    <div class="section__icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h2 class="section__title">
+                        What we do
+                    </h2>
+                    <div class="section__text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid cum ipsam molestias mollitia non quia, rerum tenetur voluptatibus! Adipisci consequatur esse hic nobis reiciendis tempore?
+                    </div>
+                </div>
+            </section>
+
+            <section class="section contact">
+                <div class="section__row">
+                    <div class="section__col section__col_bg ibg">
+                        <img src="img/contacts-bg.jpg" alt="">
+                    </div>
+                    <div id="contact" class="section__col section__col_txt">
+                        <div class="section__icon">
+                            <i class="fas fa-feather-alt"></i>
+                        </div>
+                        <h2 class="section__title">
+                            Contact us
+                        </h2>
+                        <div class="section__text">
+                            <form action="#" method="post" class="form">
+                                <div class="form__body">
+                                    <div class="form__row">
+                                        <label for="contact-name" class="form__label form__col">
+                                            <span class="form__label-text">Name:<span class="form__label-asterisk">*</span></span>
+                                            <input class="form__input" id="contact-name" type="text" name="name" placeholder="eg. Chuck Norris" data-error="false" value="" required>
+                                        </label>
+                                        <label for="contact-email" class="form__label form__col">
+                                            <span class="form__label-text">Email:<span class="form__label-asterisk">*</span></span>
+                                            <input class="form__input" id="contact-email" type="text" name="email" placeholder="your-name@domain.com" data-error="false" value="" required>
+                                        </label>
+                                    </div>
+                                    <label for="contact-subject" class="form__label">
+                                        <span class="form__label-text">Subject:<span class="form__label-asterisk">*</span></span>
+                                        <input class="form__input" id="contact-subject" type="text" name="subject" placeholder="Thanks for a good service!" data-error="false" value="" required>
+                                    </label>
+                                    <label for="contact-textarea" class="form__label">
+                                        <span class="form__label-text">Message:<span class="form__label-asterisk">*</span></span>
+                                        <textarea class="form__textarea" rows="6" id="contact-textarea" name="message" placeholder="Let us know what you're thinking" data-error="false" required></textarea>
+                                    </label>
+                                </div>
+                                <div class="form__action">
+                                    <button type="submit" role="button" class="form__button btn btn_fill">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="section__col section__col_bg ibg hide-md">
+                        <img src="img/contacts-bg-2.jpg" alt="">
+                    </div>
+                </div>
+            </section>
         </div>
 
         <footer class="footer">
@@ -81,9 +141,9 @@
                     <nav class="footer__menu menu">
                         <div class="menu__body">
                             <ul class="menu__list">
-                                <li><a href="#" class="menu__link"><i class="fab fa-google-play"></i> Install App</a></li>
-                                <li><a href="#" class="menu__link">Contact</a></li>
-                                <li><a href="#" class="menu__link">About us</a></li>
+                                <li><a href="#" class="menu__link js-scroll-trigger"><i class="fab fa-google-play"></i> Install App</a></li>
+                                <li><a href="#contact" class="menu__link js-scroll-trigger">Contact</a></li>
+                                <li><a href="#about" class="menu__link js-scroll-trigger">About us</a></li>
                             </ul>
                         </div>
                     </nav>

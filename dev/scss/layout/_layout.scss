@@ -36,6 +36,31 @@
   font-size: 1rem;
 }
 
+.about {
+  text-align: center;
+  padding: 50px 25px;
+}
+
+.contact {
+  //background-color: $color-light;
+
+  .section__col_bg {
+    flex: 0 1 30%;
+  }
+  .section__col_txt {
+    flex: 1 0 40%;
+  }
+
+  @include respond-to('md') {
+    .section__col_bg {
+      flex: 0 1 40%;
+    }
+    .section__col_txt {
+      flex: 1 0 60%;
+    }
+  }
+}
+
 .footer {
   padding: 25px 0;
   background-color: $color-dark;

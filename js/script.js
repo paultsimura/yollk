@@ -1,6 +1,8 @@
 $(function() {
   $('.wrapper').addClass('loaded');
 
+
+
   // Burger menu button handler
   $('.icon-menu').click(function() {
     $(this).toggleClass('active');
@@ -10,7 +12,7 @@ $(function() {
   });
 
   // Scrolling offset
-  const OFFSET = 60;
+  const OFFSET = 0;
 
   // Smooth scrolling using jQuery easing
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
@@ -26,4 +28,23 @@ $(function() {
       }
     }
   });
+
+  // Closes responsive menu when a scroll trigger link is clicked
+  $('.menu .js-scroll-trigger').click(function() {
+    $('.icon-menu').toggleClass('active');
+    $('.menu__body').toggleClass('active');
+    $('.menu__logo').toggleClass('active');
+    $('body').toggleClass('lock');
+  });
+
+  function ibg() {
+    $.each($('.ibg'), function () {
+      if ($(this).find('img').length) {
+        $(this).css('background-image', `url('${$(this).find('img').attr('src')}')`);
+      }
+    });
+  }
+
+  ibg();
+
 });

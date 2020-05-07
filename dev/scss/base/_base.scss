@@ -1,16 +1,25 @@
 @import "reset";
 @import "mixins";
 
+@include placeholders('rgba(119, 119, 119)');
 /* base */
 
 $color-yellow: #ffc93c;
+$color-yellow-light: rgb(235, 184, 56);
 $color-orange: #ff9a3c;
 $color-red: #ff6f3c;
 $color-navy: #155263;
 $color-dark: #262b2e;
+$color-light: #f9fbfb;
 
 body {
   font-family: "Montserrat", Helvetica, sans-serif;
+
+  @include respond-to('sm') {
+    &.lock {
+      overflow: hidden;
+    }
+  }
 }
 
 a {
@@ -19,3 +28,20 @@ a {
     cursor: pointer;
   }
 }
+
+.ibg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  img {
+    display: none;
+  }
+}
+
+.hide-md {
+  @include respond-to('md') {
+    display: none;
+  }
+}
+
