@@ -457,7 +457,6 @@ a:hover {
 @media (max-width: 767px) {
   .header {
     position: fixed;
-    background-color: #fff;
   }
   .header__row {
     padding: 15px 0;
@@ -471,6 +470,7 @@ a:hover {
   }
   .header__logo_sm {
     display: block;
+    visibility: hidden;
   }
 }
 
@@ -546,7 +546,7 @@ a:hover {
 }
 @media (max-width: 767px) {
   .cover {
-    padding: 100px 25px 75px;
+    padding: 75px 25px 50px;
   }
   .cover__logo {
     width: 150px;

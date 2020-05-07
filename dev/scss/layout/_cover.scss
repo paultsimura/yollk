@@ -64,7 +64,7 @@
   }
 
   @include respond-to('sm') {
-    padding: 100px 25px 75px;
+    padding: 75px 25px 50px;
 
     &__logo {
       width: 150px;

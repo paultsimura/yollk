@@ -33,7 +33,6 @@
 
   @include respond-to('sm') {
     position: fixed;
-    background-color: #fff;
 
     &__row {
       padding: 15px 0;
@@ -47,6 +46,7 @@
       }
       &_sm {
         display: block;
+        visibility: hidden;
       }
     }
   }
